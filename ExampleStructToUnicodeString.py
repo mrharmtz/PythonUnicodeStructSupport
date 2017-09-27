@@ -11,7 +11,7 @@ def uni_from_excel_cell(uni_cell):
     return unicode(uni_cell.value)
 
 # an example of how to add a new type for parsing
-unistr.DEFAULT_PARSE_TABLE[type(xlrd.sheet.Cell)] = uni_from_excel_cell
+unistr.DEFAULT_PARSE_TABLE[xlrd.sheet.Cell] = uni_from_excel_cell
 
 # an example of real world application(ran in PyCharm),
 # might have issue when ran on a console,
